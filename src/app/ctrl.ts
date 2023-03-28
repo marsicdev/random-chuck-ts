@@ -1,10 +1,10 @@
 import * as data from './data'
 import * as ui from './ui'
 
-const loadRandomJoke = async () => {
+const loadRandomJoke = async (): Promise<void> => {
     try {
-        ui.displayProgress(true)
-        const quote = await data.fetchRandomQuote()
+        ui.displayProgress()
+        const quote = await data.fetchRandomJoke()
         ui.displayQuote(quote)
     } catch (error) {
         console.log('error', error)
@@ -15,7 +15,9 @@ const loadRandomJoke = async () => {
 
 export const init = () => {
     // Initially load random joke
-    loadRandomJoke()
+    loadRandomJoke().then(() => {
+        console.log('Initial load done!')
+    })
 
     // Register listener for joke change
     ui.onRandomQuoteClick(() => {
