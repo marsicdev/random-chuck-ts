@@ -39,7 +39,7 @@ export const displayQuote = (quote: Quote) => {
  * Displays and hides progress indicators
  * @param {Boolean} loading Status to show progress, default `true`
  */
-export const displayProgress = (loading: boolean = true) => {
+export const displayProgress = (loading = true) => {
     const $subtitleElem = findSubtitleElement()
     $subtitleElem.textContent = loading ? 'Joking...' : ''
 

@@ -8,7 +8,9 @@
         "predeploy": "npm run build",
         "deploy": "gh-pages -d dist",
         "dev": "vite",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "lint": "eslint ./src",
+        "lint:fix": "eslint ./src --fix"
     },
     "dependencies": {
         "@picocss/pico": "^1.5.7",
@@ -16,6 +18,9 @@
         "gh-pages": "^5.0.0"
     },
     "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.57.0",
+        "@typescript-eslint/parser": "^5.57.0",
+        "eslint": "^8.36.0",
         "typescript": "^4.5.4",
         "vite": "^2.8.0"
     }

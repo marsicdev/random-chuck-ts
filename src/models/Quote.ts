@@ -1,9 +1,9 @@
 import { ChuckResponse } from '../types'
 
 class Quote {
-    readonly id: any
-    readonly text: any
-    readonly icon: any
+    readonly id: string
+    readonly text: string
+    readonly icon: string
 
     constructor(data: ChuckResponse) {
         this.id = data.id

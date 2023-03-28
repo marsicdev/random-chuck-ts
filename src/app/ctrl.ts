@@ -7,6 +7,7 @@ const loadRandomJoke = async (): Promise<void> => {
         const quote = await data.fetchRandomJoke()
         ui.displayQuote(quote)
     } catch (error) {
+        // eslint-disable-next-line no-console
         console.log('error', error)
     } finally {
         ui.displayProgress(false)
@@ -16,6 +17,7 @@ const loadRandomJoke = async (): Promise<void> => {
 export const init = () => {
     // Initially load random joke
     loadRandomJoke().then(() => {
+        // eslint-disable-next-line no-console
         console.log('Initial load done!')
     })
 
